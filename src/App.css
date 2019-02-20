@@ -31,3 +31,70 @@
     transform: rotate(360deg);
   }
 }
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://i.ytimg.com/vi/h4tbMIJQxlc/maxresdefault.jpg");
+  background-position: center; 
+    background-size: cover;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#drum-machine {
+  width: 300px;
+  height: 300px;
+  justify-items: center;
+  align-items: center;
+  background: rgba(255, 175, 46, .5);
+  border: solid 4px rgba(0, 0, 0, .5);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  padding: 20px;
+  border-radius: 10px;
+  grid-template-areas:
+    "display display display"
+    "Q W E"
+    "A S D"
+    "Z X C";
+}
+#display {
+  font-family: Raleway, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 3px;
+  grid-area: display;
+  width: 100%;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.drum-pad {
+  font-family: Raleway, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: rgba(51, 51, 51, .8);
+  outline: none;
+  padding: 8px 18px 6px 18px;
+  margin-top: 10px;
+  opacity: 1;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}
